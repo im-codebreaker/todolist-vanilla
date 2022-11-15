@@ -1,16 +1,17 @@
 body{
     font-size: 24px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
+    font-family: 'Dancing Script', cursive;
+    background: rgb(31,97,199);
+   
 }
 
 
 /* MON TITRE */
 
 #app h1 {
-    color: #000;
+    color: #fff;
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Dancing Script', cursive;
 }
 
 
@@ -18,13 +19,11 @@ body{
 /* LISTE */
 
 #app ul{
-    border-bottom-right-radius: 25px;
+    background: rgb(250,252,255);
+    background: linear-gradient(137deg, rgba(250,252,255,1) 30%, rgba(240,242,191,0.8687850140056023) 50%, rgba(255,255,255,1) 67%);
+    padding-inline-start: 0;
 
-    box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.75);
-
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(110,140,194,1) 90%, rgba(129,186,241,1) 100%);
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,17 +32,80 @@ body{
     max-width: 100vh;
 }
 
+
 #app ul li{
+padding-inline-start: 0;
 position: relative;
 list-style-type: none;
-padding: 0.5rem 0 .5rem 0;
+padding: 0;
  width: 100%;
+ border: 0.25px solid grey;
+ border
+}
+#app ul li:first-child{
+    border-top: 2px solid grey; /*conserver la même taille de bordure */
+}
+#app ul li:last-child{
+    border-bottom: 2px solid grey; /*conserver la même taille de bordure */
 }
 
-/* BOUTON */ 
+#app ul li p{
+    padding: 0.5rem 0 .5rem 0.5rem;
+}
+
+/* BOUTONS LISTE SUPPRIMER */ 
 
 #app ul li button{
+    /*placement du bouton*/
     position: absolute;
     right: 5px;
     bottom: 35px;
+    /* style du bouton */
+    background: linear-gradient(137deg, rgba(199,31,31,1) 45%, rgba(250,179,159,1) 96%);
+    padding: 0.5rem;
+    border-style: none;
+    box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* FORMULAIRE */
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: self-start;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100vh;
+}
+
+/* Label */ 
+
+label{
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* input */
+
+input{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 60%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+}
+
+form button{
+    margin-top: 1.5rem;
+    background: linear-gradient(137deg, rgba(68,199,31,1) 70%, rgba(172,250,159,1) 96%);
+    padding: 0.5rem;
+    border-style: none;
+    box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.75);
 }
