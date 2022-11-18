@@ -5,6 +5,10 @@ body {
 
 }
 
+button{
+    cursor: pointer;
+    border-radius: 10px;
+}
 
 /* MON TITRE */
 
@@ -30,6 +34,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     max-width: 100vh;
+    border-radius: 15px;
 }
 
 
@@ -45,11 +50,15 @@ body {
 
 #app ul li:first-child {
     border-top: 2px solid grey;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     /*conserver la même taille de bordure */
 }
 
 #app ul li:last-child {
     border-bottom: 2px solid grey;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
     /*conserver la même taille de bordure */
 }
 
@@ -62,7 +71,7 @@ body {
 #app ul li button {
     /*placement du bouton*/
     position: absolute;
-    right: 5px;
+    right: 15px;
     bottom: 35px;
     /* style du bouton */
     background: linear-gradient(137deg, rgba(199, 31, 31, 1) 45%, rgba(250, 179, 159, 1) 96%);
@@ -94,7 +103,7 @@ label {
     margin-bottom: 1rem;
 }
 
-form div {
+form .input_error {
     /* la div qui entoure mon input et mon message d'errreur*/
 
     display: flex;
@@ -106,10 +115,14 @@ form div {
 form div span {
     opacity: 0;
     text-align: center;
-    font-size: 22px;
-    padding-left: 1rem;
+    font-size: 15px;
+    padding:.25rem;
+    margin-left: 1rem;
+    background-color: rgba(255, 255, 255, 0.664);
     color: red;
-    font-family: serif;
+    font-family: sans-serif;
+    border-radius: 5px;
+
 }
 
 label {
@@ -122,12 +135,22 @@ label {
 
 /* input */
 
-input {
+form input {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     width: 60%;
     font-family: 'Dancing Script', cursive;
     font-size: 22px;
+    border-radius: 5px;
+}
+
+.flex-buttons button:first-child{
+    margin-right: 1rem;
+}
+.flex-buttons label button{
+    border-radius: 0;
+    background: linear-gradient(142deg, rgba(237,189,126,1) 82%, rgba(250,243,159,1) 96%);
+
 }
 
 form button {
@@ -142,6 +165,16 @@ form button {
 
 /* CLASS */
 
-.visible{
+.visible{ /* message d'erreur */
+    transition: .5s;
     opacity: 1;
+}
+
+.position{/* position du bouton checkbox */
+   position: absolute;
+   bottom: 35px;
+   right: 100px;
+   height: 25px;
+   width: 25px;
+
 }
