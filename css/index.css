@@ -7,7 +7,8 @@ body {
 
 button{
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 15px;
+    
 }
 
 /* MON TITRE */
@@ -39,6 +40,9 @@ button{
 
 
 #app ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding-inline-start: 0;
     position: relative;
     list-style-type: none;
@@ -63,6 +67,7 @@ button{
 }
 
 #app ul li p {
+    flex: 1;
     padding: 0.5rem 0 .5rem 0.5rem;
 }
 
@@ -70,8 +75,8 @@ button{
 
 #app ul li button {
     /*placement du bouton*/
-    position: absolute;
-    right: 15px;
+    /*position: absolute;*/
+    border-radius: 0;
     bottom: 35px;
     /* style du bouton */
     background: linear-gradient(137deg, rgba(199, 31, 31, 1) 45%, rgba(250, 179, 159, 1) 96%);
@@ -80,6 +85,22 @@ button{
     box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#app ul li .dobutton {
+    /*bouton tache validé*/
+    background: linear-gradient(137deg, rgb(31, 199, 107) 45%, rgb(87, 128, 102) 96%);
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+    
+}
+
+#app ul li:first-child button{
+    border-top-right-radius: 15px;
+}
+
+#app ul li:last-child button{
+    border-bottom-right-radius: 15px;
 }
 
 /* FORMULAIRE */
@@ -138,32 +159,76 @@ label {
 form input {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    width: 60%;
+    width: 100%;
     font-family: 'Dancing Script', cursive;
     font-size: 22px;
     border-radius: 5px;
 }
+.flex-buttons{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
 
 .flex-buttons button:first-child{
-    margin-right: 1rem;
+    flex: 1;
 }
-.flex-buttons label button{
-    border-radius: 0;
-    background: linear-gradient(142deg, rgba(237,189,126,1) 82%, rgba(250,243,159,1) 96%);
-
+.flex-buttons button{
+   margin-right: .5rem;
 }
 
 form button {
+    color: rgba(68, 199, 31, 1);
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    font-weight: 400;
     margin-top: 1.5rem;
-    background: linear-gradient(137deg, rgba(68, 199, 31, 1) 70%, rgba(172, 250, 159, 1) 96%);
-    padding: 0.5rem;
-    border-style: none;
-    box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    /*background: linear-gradient(137deg, rgba(68, 199, 31, 1) 70%, rgba(172, 250, 159, 1) 96%);*/
+    border: 2px solid rgba(68, 199, 31, 1);
+    padding: .5rem 1.5rem;
+    /*border-style: none;*/
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    transition: .35s;
+}
+
+form button:hover{
+color: #fff;
+background-color:rgba(68, 199, 31, 1);
+transition: .35s;
+}
+
+/*BOUTON SUPPRIMER TOUS */
+
+.flex-container button{
+    color: rgba(199, 31, 31, 1);
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 1.5rem;
+    /*background: linear-gradient(137deg, rgba(68, 199, 31, 1) 70%, rgba(172, 250, 159, 1) 96%);*/
+    border: 2px solid rgba(199, 31, 31, 1);
+    padding: .5rem 1.5rem;
+    /*border-style: none;*/
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    transition: .35s;
+}
+
+.flex-container button:hover{
+    color: #fff;
+    background-color: rgba(199, 31, 31, 1);
+    transition: .35s;
 }
 
 /* CLASS */
+.flex-container{
+    display: flex;
+    justify-content: center;
+}
 
 .visible{ /* message d'erreur */
     transition: .5s;
@@ -177,4 +242,15 @@ form button {
    height: 25px;
    width: 25px;
 
+}
+
+.fas{
+    pointer-events: none; /* ignorer le clic sur l'icone */
+}
+
+.opacity-5{
+    opacity: .5;
+}
+.opacity{
+    opacity: 1;
 }
