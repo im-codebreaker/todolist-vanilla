@@ -157,8 +157,8 @@ label {
 /* input */
 
 form input {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: .5rem;
     width: 100%;
     font-family: 'Dancing Script', cursive;
     font-size: 22px;
@@ -183,7 +183,6 @@ form button {
     font-family: 'Dancing Script', cursive;
     font-size: 20px;
     font-weight: 400;
-    margin-top: 1.5rem;
     /*background: linear-gradient(137deg, rgba(68, 199, 31, 1) 70%, rgba(172, 250, 159, 1) 96%);*/
     border: 2px solid rgba(68, 199, 31, 1);
     padding: .5rem 1.5rem;
@@ -200,6 +199,20 @@ background-color:rgba(68, 199, 31, 1);
 transition: .35s;
 }
 
+select{ /* list bouton */
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    border-radius: 15px;
+    color:rgba(68, 199, 31, 1);
+    border: 2px solid rgba(68, 199, 31, 1);
+    padding-left: .5rem;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+
 /*BOUTON SUPPRIMER TOUS */
 
 .flex-container button{
@@ -207,7 +220,6 @@ transition: .35s;
     font-family: 'Dancing Script', cursive;
     font-size: 20px;
     font-weight: 400;
-    margin-top: 1.5rem;
     /*background: linear-gradient(137deg, rgba(68, 199, 31, 1) 70%, rgba(172, 250, 159, 1) 96%);*/
     border: 2px solid rgba(199, 31, 31, 1);
     padding: .5rem 1.5rem;
@@ -248,8 +260,9 @@ transition: .35s;
     pointer-events: none; /* ignorer le clic sur l'icone */
 }
 
-.opacity-5{
+.completed{
     opacity: .5;
+    transition: .35s;
 }
 .opacity{
     opacity: 1;
